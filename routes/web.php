@@ -18,5 +18,14 @@ Route::get('/', function () {
 });
 
 Route::get('/burgers', function () {
-    return view('burgers');
+  //Get data from database
+
+ 
+    return view('burgers',
+    [
+      
+      'name' => request('name'),
+      'age' => request('age'),
+
+    ]);
 });
